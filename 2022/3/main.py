@@ -19,8 +19,6 @@ def main():
         mid = int(len(line.strip())/2)
         first_half = line.strip()[0:mid]
         second_half =  line.strip()[mid:len(line.strip())]
-        print(first_half)
-        print(second_half)
 
         unique_first_half = []
 
@@ -35,7 +33,21 @@ def main():
     for i in duplicates:
         sum += priorities[i]
 
-    print('Sum: ' + str(sum))
+    print('Part 1 sum: ' + str(sum))
+
+    badges = []
+    possibilities = list(ascii_lowercase) + list(ascii_uppercase)
+
+    for i in range(int(len(file)/3)):
+        for letter in possibilities:
+            if letter in file[3*i] and letter in file[3*i+1] and letter in file[3*i+2]:
+                badges.append(letter)
+    sum = 0
+
+    for i in badges:
+        sum += priorities[i]
+
+    print('Part 2 sum: ' + str(sum))
 
 if __name__ == "__main__":
     main()
