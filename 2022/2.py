@@ -1,5 +1,5 @@
 def main():
-    with open('input.txt') as f:
+    with open('inputs/2.txt') as f:
         file = f.readlines()
 
     initial_score = 0
@@ -39,7 +39,7 @@ def main():
             if opponent == 'B': instructions_score += 6 + 3
             if opponent == 'C': instructions_score += 6 + 1
 
-    print('Istructions: ' + str(instructions_score))
+    print('Instructions: ' + str(instructions_score))
 
 
 if __name__ == "__main__":
