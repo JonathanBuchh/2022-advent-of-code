@@ -20,7 +20,7 @@ def main():
             if me == 'Y': initial_score += 2 + 0
             if me == 'Z': initial_score += 3 + 3
 
-    print('No instructions: ' + str(initial_score))
+    print('Without instructions: ' + str(initial_score)) # 8392
     instructions_score = 0
 
     for i in range(len(file)):
@@ -39,8 +39,7 @@ def main():
             if opponent == 'B': instructions_score += 6 + 3
             if opponent == 'C': instructions_score += 6 + 1
 
-    print('Instructions: ' + str(instructions_score))
-
+    print('With instructions: ' + str(instructions_score)) # 10116
 
 if __name__ == "__main__":
     main()

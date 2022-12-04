@@ -12,7 +12,7 @@ def main():
         else:
             calories[count] += int(line.strip())
 
-    print('Max calories: ' + str(max(calories)))
+    print('Max calories: ' + str(max(calories))) # 74198
 
     top_three_total = 0
 
@@ -20,7 +20,7 @@ def main():
         top_three_total += max(calories)
         calories.remove(max(calories))
 
-    print('Top three total: ' + str(top_three_total))
+    print('Top three total: ' + str(top_three_total)) # 209914
 
 if __name__ == "__main__":
     main()

@@ -33,7 +33,7 @@ def main():
     for i in duplicates:
         sum += priorities[i]
 
-    print('Part 1 sum: ' + str(sum))
+    print('Part 1 sum: ' + str(sum)) # 7903
 
     badges = []
     possibilities = list(ascii_lowercase) + list(ascii_uppercase)
@@ -47,7 +47,7 @@ def main():
     for i in badges:
         sum += priorities[i]
 
-    print('Part 2 sum: ' + str(sum))
+    print('Part 2 sum: ' + str(sum)) # 2548
 
 if __name__ == "__main__":
     main()
