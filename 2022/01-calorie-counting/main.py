@@ -1,5 +1,5 @@
 def main():
-    with open('inputs/1.txt') as f:
+    with open('input.txt') as f:
         file = f.readlines()
 
     calories = [0]

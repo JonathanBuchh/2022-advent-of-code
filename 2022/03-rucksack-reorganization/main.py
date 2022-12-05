@@ -10,7 +10,7 @@ def main():
         else:
             priorities[ascii_uppercase[i-27]] = i
 
-    with open('inputs/3.txt') as f:
+    with open('input.txt') as f:
         file = f.readlines()
 
     duplicates = []

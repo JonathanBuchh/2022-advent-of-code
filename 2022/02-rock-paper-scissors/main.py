@@ -1,5 +1,5 @@
 def main():
-    with open('inputs/2.txt') as f:
+    with open('input.txt') as f:
         file = f.readlines()
 
     initial_score = 0

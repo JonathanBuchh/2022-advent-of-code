@@ -1,7 +1,7 @@
 import re
 
 def main():
-    with open('inputs/4.txt') as f:
+    with open('input.txt') as f:
         file = f.readlines()
 
     complete_overlaps = 0
