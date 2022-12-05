@@ -1,26 +1,18 @@
 def main():
-    with open('input.txt') as f:
-        file = f.readlines()
+    with open('input.txt') as file:
+        data = [i for i in file.read().strip().split("\n")]
 
-    calories = [0]
-    count = 0
+    temp_sum = 0
+    sums = []
 
-    for line in file:
-        if len(line.strip()) == 0:
-            count += 1
-            calories.append(0)
-        else:
-            calories[count] += int(line.strip())
+    for i in data:
+        if i == "":
+            sums.append(temp_sum)
+            temp_sum = 0
+        else: temp_sum += int(i)
 
-    print('Max calories: ' + str(max(calories))) # 74198
-
-    top_three_total = 0
-
-    for i in range(3):
-        top_three_total += max(calories)
-        calories.remove(max(calories))
-
-    print('Top three total: ' + str(top_three_total)) # 209914
+    print(f"Part 1: {sorted(sums)[-1]}") # 74198
+    print(f"Part 2: {sum(sorted(sums)[-3:])}") # 209914
 
 if __name__ == "__main__":
     main()
